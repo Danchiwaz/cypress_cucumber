@@ -1,6 +1,7 @@
 Feature: Example feature
-  Scenario: Clicking the button
+  Background:
     Given I open the application
+  Scenario: Success Login
     When I type username
     When I type password
     When I click login button

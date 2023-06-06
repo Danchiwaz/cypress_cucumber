@@ -5,11 +5,11 @@ Given('I open the application', () => {
   cy.visit('/');
 });
 
-When('I type username', () => {
-  cy.get('#user-name').type("standard_user");
+When('I type username {string}', (username) => {
+  cy.get('#user-name').type(username);
 });
-When("I type password", () => {
-    cy.get('#password').type("secret_sauce");
+When("I type password {string}", (password) => {
+    cy.get('#password').type(password);
 })
 When("I click login button", () => {
     cy.get("#login-button").click();
